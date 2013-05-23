@@ -85,3 +85,12 @@ class WebDriver(RemoteWebDriver):
     @property
     def firefox_profile(self):
         return self.profile
+
+    def clear_cache(self):
+        """
+        Delete all cookies in the scope of the session.
+
+        :Usage:
+            driver.delete_all_cookies()
+        """
+        self.execute(Command.CLEAR_CACHE)

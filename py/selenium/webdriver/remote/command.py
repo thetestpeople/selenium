@@ -39,6 +39,7 @@ class Command(object):
     GET_ALL_COOKIES = "getCookies"
     DELETE_COOKIE = "deleteCookie"
     DELETE_ALL_COOKIES = "deleteAllCookies"
+    CLEAR_CACHE = "clearCache"
     FIND_ELEMENT = "findElement"
     FIND_ELEMENTS = "findElements"
     FIND_CHILD_ELEMENT = "findChildElement"

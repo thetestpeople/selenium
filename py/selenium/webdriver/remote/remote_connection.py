@@ -223,6 +223,8 @@ class RemoteConnection(object):
                 ('DELETE', '/session/$sessionId/cookie'),
             Command.DELETE_COOKIE:
                 ('DELETE', '/session/$sessionId/cookie/$name'),
+            Command.CLEAR_CACHE:
+                ('POST', '/session/$sessionId/clear_cache'),
             Command.SWITCH_TO_FRAME: ('POST', '/session/$sessionId/frame'),
             Command.SWITCH_TO_WINDOW: ('POST', '/session/$sessionId/window'),
             Command.CLOSE: ('DELETE', '/session/$sessionId/window'),
