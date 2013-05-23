@@ -869,6 +869,23 @@ FirefoxDriver.prototype.deleteAllCookies = function(respond) {
 };
 
 
+FirefoxDriver.prototype.clearCache = function(respond) {
+    var cacheService = fxdriver.moz.getService('@mozilla.org/network/cache-service;1', 'nsICacheService');
+    var cacheInterface = Components.interfaces.nsICache;
+
+    try
+    {
+      cacheService.evictEntries(cacheInterface.STORE_ANYWHERE);
+    }
+    catch(exception)
+    {
+      // Ignore
+    }
+
+  respond.send();
+};
+
+
 FirefoxDriver.prototype.setTimeout = function(respond, parameters) {
   switch (parameters.type) {
     case 'implicit':

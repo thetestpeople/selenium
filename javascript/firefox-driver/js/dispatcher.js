@@ -332,6 +332,9 @@ Dispatcher.prototype.init_ = function() {
 
   this.bind_('/extensions/firefox/quit').
       on(Request.Method.POST, Dispatcher.executeAs('quit'));
+
+  this.bind_('/session/:sessionId/clear_cache').
+	on(Request.Method.POST, Dispatcher.executeAs('clearCache'));
 };
 
 
