@@ -198,4 +198,9 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <PropertyGroup>
+    <IncludePath>C:\WinDDK\7600.16385.1\inc\atl71;C:\WinDDK\7600.16385.1\inc\mfc42;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Platform)'=='Win32'">C:\WinDDK\7600.16385.1\lib\ATL\i386;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Platform)'=='x64'">C:\WinDDK\7600.16385.1\lib\ATL\amd64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
 </Project>
